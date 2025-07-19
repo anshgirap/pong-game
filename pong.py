@@ -1,13 +1,15 @@
-import pygame, sys, random
-
+import pygame, sys, random, os
 pygame.init()
+
 WIDTH, HEIGHT = 800, 600
 WHITE, BLACK = (255,255,255), (0,0,0)
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
-pygame.display.set_caption("Pong Dirty")
+pygame.display.set_caption("Pong Retro")
 
-font = pygame.font.SysFont(None, 36)
+# Load retro pixel font
+font_path = os.path.join("assets", "PressStart2P.ttf")
+font = pygame.font.Font(font_path, 16)
 
 ball = pygame.Rect(WIDTH//2, HEIGHT//2, 20, 20)
 player = pygame.Rect(WIDTH - 20, HEIGHT//2 - 50, 10, 100)
@@ -22,6 +24,14 @@ player_score = 0
 opponent_score = 0
 win_score = 7
 game_over = False
+
+# Glow surface
+glow_surface = pygame.Surface((WIDTH, HEIGHT), pygame.SRCALPHA)
+for i in range(0, WIDTH, 10):
+    for j in range(0, HEIGHT, 10):
+        dist = ((i - WIDTH//2)**2 + (j - HEIGHT//2)**2)**0.5
+        brightness = max(0, 255 - int(dist * 0.5))
+        glow_surface.fill((brightness, brightness, brightness, 10), pygame.Rect(i, j, 10, 10))
 
 while True:
     for event in pygame.event.get():
@@ -74,7 +84,7 @@ while True:
     pygame.draw.ellipse(screen, WHITE, ball)
     pygame.draw.aaline(screen, WHITE, (WIDTH//2, 0), (WIDTH//2, HEIGHT))
 
-    score_text = font.render(f"{opponent_score}  {player_score}", True, WHITE)
+    score_text = font.render(f"{opponent_score}   {player_score}", True, WHITE)
     screen.blit(score_text, (WIDTH//2 - score_text.get_width()//2, 20))
 
     if game_over:
@@ -82,6 +92,8 @@ while True:
         screen.blit(win_text, (WIDTH//2 - win_text.get_width()//2, HEIGHT//2 - 20))
         restart = font.render("Press R to Restart", True, WHITE)
         screen.blit(restart, (WIDTH//2 - restart.get_width()//2, HEIGHT//2 + 30))
+
+    screen.blit(glow_surface, (0, 0), special_flags=pygame.BLEND_RGBA_ADD)
 
     pygame.display.flip()
     clock.tick(60)
