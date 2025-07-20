@@ -1,5 +1,10 @@
 # 🕹️ Pong Game
 
+![GitHub repo size](https://img.shields.io/github/repo-size/anshgirap/pong-game)
+![GitHub last commit](https://img.shields.io/github/last-commit/anshgirap/pong-game)
+![GitHub license](https://img.shields.io/github/license/anshgirap/pong-game)
+![GitHub issues](https://img.shields.io/github/issues/anshgirap/pong-game)
+
 A retro-style Pong clone built using Python and Pygame — complete with beatable AI, CRT-style visuals, and pixel-perfect UI. Designed to look and feel like an arcade game, but written in clean, modern Python.
 
 ---
