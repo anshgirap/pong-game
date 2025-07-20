@@ -1,4 +1,4 @@
-# 🕹️ Pong Game
+<h1 align="center">Pong Game 🎮</h1>
 
 <p align="center">
   <img alt="Python version" src="https://img.shields.io/badge/Python-3.11-blue.svg?style=flat-square&logo=python">
