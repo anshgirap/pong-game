@@ -1,4 +1,4 @@
-<h1 align="center">Pong Game 🎮</h1>
+<h1 align="center">Pong Game</h1>
 
 <p align="center">
   <img alt="Python version" src="https://img.shields.io/badge/Python-3.11-blue.svg?style=flat-square&logo=python">
@@ -47,9 +47,11 @@ Designed to capture the charm of classic arcade gaming while keeping the code mo
 
 ## 📦 Installation
 
-### 1. Clone the repository
+1. **Clone the repository**  
+   `git clone https://github.com/anshgirap/pong-game.git && cd pong-game`
 
-```bash
-git clone https://github.com/anshgirap/pong-game.git
-cd pong-game
-```
+2. **Install Pygame**  
+   `pip install pygame`
+
+3. **Run the game**  
+   `python pong.py`
