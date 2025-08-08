@@ -33,11 +33,18 @@ game_over = False
 
 # === Glow Surface ===
 glow_surface = pygame.Surface((WIDTH, HEIGHT), pygame.SRCALPHA)
+GLOW_COLOR = (0, 255, 128)  # Soft green
+
 for i in range(0, WIDTH, 10):
     for j in range(0, HEIGHT, 10):
-        dist = ((i - WIDTH // 2) ** 2 + (j - HEIGHT // 2) ** 2) ** 0.5
-        brightness = max(0, 255 - int(dist * 0.5))
-        glow_surface.fill((brightness, brightness, brightness, 4), pygame.Rect(i, j, 10, 10))  # softer CRT glow
+        b = max(0, 255 - int(((i - WIDTH // 2)**2 + (j - HEIGHT // 2)**2)**0.5 * 0.5))
+        glow_surface.fill(
+            (GLOW_COLOR[0] * b // 255,
+             GLOW_COLOR[1] * b // 255,
+             GLOW_COLOR[2] * b // 255,
+             4),
+            (i, j, 10, 10)
+        )
 
 # === Functions ===
 def draw():
