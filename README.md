@@ -7,19 +7,28 @@
   <img alt="License" src="https://img.shields.io/github/license/anshgirap/pong-game?style=flat-square&color=brightgreen">
 </p>
 
-A retro-style Pong clone built using Python and Pygame — complete with beatable AI, CRT-style visuals, and pixel-perfect UI. Designed to look and feel like an arcade game, but written in clean, modern Python.
+A retro-inspired Pong clone built with Python and Pygame — featuring a beatable AI opponent, CRT-style glow, and crisp pixel-perfect visuals.  
+Designed to capture the charm of classic arcade gaming while keeping the code modern, minimal, and easy to follow.
+
+---
+
+## 📸 Showcase
+
+<p align="center">
+  <img src="assets/pong-screenshot.png" alt="Pong Game Screenshot" width="600">
+</p>
 
 ---
 
 ## 🎮 Features
 
-- 🧠 Beatable AI opponent (not perfect, but fast)
-- 🖥️ Retro CRT glow and pixel font (Press Start 2P)
-- 🟩 "YOU WIN" and 🟥 "YOU LOSE" end screens
-- 🎯 Ball gets faster with each rally
-- 🏁 First to 7 points wins the match
-- 🔁 Quick restart option
-- 💾 Clean, single-file implementation
+- 🧠 **Beatable AI** — fast but not unbeatable
+- 🖥️ **Retro CRT glow** & _Press Start 2P_ pixel font
+- 🟩 **"YOU WIN"** / 🟥 **"YOU LOSE"** end screens
+- 🎯 **Dynamic ball speed** — faster rallies get intense
+- 🏁 **First to 7 points** takes the match
+- 🔁 **Instant restart** after game over
+- 💾 **Single-file implementation** for easy tweaking
 
 ---
 
@@ -32,7 +41,7 @@ A retro-style Pong clone built using Python and Pygame — complete with beatabl
 | 🔁 R            | Restart after game over |
 | 🔴 Close Button | Quit the game           |
 
-> Note: Press the **window close button (X)** to exit the game. There is no ESC key binding.
+> **Note:** Press the window close button (X) to exit — there’s no ESC key binding.
 
 ---
 
