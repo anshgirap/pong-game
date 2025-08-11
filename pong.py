@@ -2,6 +2,12 @@ import pygame, sys, random, os
 
 # === Initialization ===
 pygame.init()
+
+# Set window icon
+icon_path = os.path.join("assets", "pong-icon.png")
+icon = pygame.image.load(icon_path)
+pygame.display.set_icon(icon)
+
 WIDTH, HEIGHT = 800, 600
 WHITE, BLACK = (255, 255, 255), (0, 0, 0)
 GREEN, RED = (0, 255, 0), (255, 0, 0)
